@@ -16,11 +16,12 @@ class User(AbstractUser):
     # 个人简介
     user_desc = models.TextField(max_length=500, blank=True)
 
-    # 修改认证的字段
-    #USERNAME_FIELD = 'mobile'
+    USERNAME_FIELD = 'mobile'
+
+
 
     #创建超级管理员的需要必须输入的字段
-    #EQUIRED_FIELDS = ['username','email']
+    REQUIRED_FIELDS = ['username','email']
 
     # 内部类 class Meta 用于给 model 定义元数据
     class Meta:
